@@ -2,6 +2,67 @@
 
 @section('content')
     <img class="img-fluid" src="{{ asset('public/image/slider1.png') }}" alt="">
+
+    <div class="row p-3" style="background-color: #fff;">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="creator-tab" data-toggle="tab" href="#creator" role="tab" aria-controls="creator" aria-selected="true">I'm Job Creator</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="finder-tab" data-toggle="tab" href="#finder" role="tab" aria-controls="finder" aria-selected="false">I'm Job Finder</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="tab-content m-3" id="myTabContent" style="background-color: #fff;">
+        <div class="tab-pane fade show active" id="creator" role="tabpanel" aria-labelledby="creator-tab">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Jordy Jonatan</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">View details</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Jordy Jonatan</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">View details</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Jordy Jonatan</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">View details</a>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="finder" role="tabpanel" aria-labelledby="finder-tab">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Android Mobile Apps</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">View details</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">iOS Mobile Apps</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">View details</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Web Development e-Commerce</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">View details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="row py-3" style="background-color: #fff; padding-left:10px;">
         @if(Session::get('group_check')=='jc')
         <div class="row" style="width:100%;">
@@ -266,49 +327,30 @@
             </div>
         </div>
         @else
-        <div class="row" style="width:100%;">
-        </div>
         <div class="col-md-3">
             <img src="{{ asset('public/image/land1.jpg') }}" width="250px" height="180px" alt="">
-            <h4>FIND</h4>
+            <h2 style="text-align:center; padding-top: 15px;">FIND</h2>
             <p>Post a job to tell us about your project. 
             We'll quickly match you with the right freelancers.</p>
         </div>
         <div class="col-md-3">
             <img src="{{ asset('public/image/land2.png') }}" width="250px" height="180px" alt="">
-            <h4>HIRE</h4>
+            <h2 style="text-align:center; padding-top: 15px;">HIRE</h2>
             <p>Browse profiles, reviews, and proposals then interview top candidates. 
             Hire a favorite and begin your project</p>
         </div>
         <div class="col-md-3">
             <img src="{{ asset('public/image/land3.jpg') }}" width="250px" height="180px" alt="">
-            <h4>WORK</h4>
+            <h2 style="text-align:center; padding-top: 15px;">WORK</h2>
             <p>Use the IT Republic platform to chat, share files, and 
             collaborate from your desktop or on the go.</p>
         </div>
         <div class="col-md-3">
             <img src="{{ asset('public/image/land4.jpeg') }}" width="250px" height="180px" alt="">
-            <h4>PAY</h4>
+            <h2 style="text-align:center; padding-top: 15px;">PAY</h2>
             <p>Invoicing and payments happen through IT Republic. 
             With IT Republic Protection, only pay for work you authorize.</p>
         </div>
-
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active" id="creator-tab" data-toggle="tab" href="#creator" role="tab" aria-controls="creator" aria-selected="true">I'm Job Creator</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="finder-tab" data-toggle="tab" href="#finder" role="tab" aria-controls="finder" aria-selected="false">I'm Job Finder</a>
-  </li>
-</ul>
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="creator" role="tabpanel" aria-labelledby="creator-tab">
-    Job creator
-  </div>
-  <div class="tab-pane fade" id="finder" role="tabpanel" aria-labelledby="finder-tab">
-    Job Finder
-  </div>
-</div>
         @endif
     </div>
 @endsection
