@@ -1,6 +1,9 @@
 <?php
 
 // Authentication
+Route::get('/landing-page', 'main_controller@landing')->name('landing');
+Route::post('/landing-page/save', 'main_controller@landingSave')->name('landingSave');
+
 Route::get('/', 'main_controller@create')->name('index');
 
 Route::get('/login', 'auth_controller@create')->name('getLogin');

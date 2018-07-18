@@ -16,7 +16,8 @@ class job_finder_model extends Model
     	'phone',
 		'group_id',
 		'total_rating',
-		'status'
+		'status',
+        'profile_pict'
     ];
 
     protected $guarded = ['password'];
